@@ -1,4 +1,8 @@
 object Main extends App {
-  val message = sys.env.getOrElse("HELLO_MESSAGE", "Hello, world!")
+  val defaultMessage = "Hello, world!"
+  val message = args.headOption
+    .orElse(sys.props.get("hello.message"))
+    .orElse(sys.env.get("HELLO_MESSAGE"))
+    .getOrElse(defaultMessage)
   println(message)
 }
