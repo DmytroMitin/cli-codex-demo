@@ -1,0 +1,23 @@
+# sbt
+/target/
+/project/target/
+/project/project/
+
+# Scala build/IDE
+.metals/
+.bloop/
+.bsp/
+.scala-build/
+.idea/
+.vscode/
+
+# Local caches created by tests/CI
+/.coursier-local/
+/.ivy2-local/
+/.sbt-boot-local/
+/.sbt-local/
+
+# Misc
+*.class
+*.log
+.DS_Store
