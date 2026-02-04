@@ -14,10 +14,10 @@ Provide a message via a CLI argument:
 sbt 'run "Hello from Scala"'
 ```
 
-Or run the compiled class directly (after `sbt compile`) by including the Scala library on the classpath:
+Or run the compiled class directly (after `sbt compile`) by including the Scala library and runtime dependencies on the classpath:
 
 ```bash
-java -cp "target/scala-2.13/classes:$HOME/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.18.jar" Main "Hello from Scala"
+java -cp "target/scala-2.13/classes:$HOME/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.18.jar:$HOME/.ivy2/cache/com.typesafe/config/jars/config-1.4.3.jar" Main "Hello from Scala"
 ```
 
 ## Configuration
